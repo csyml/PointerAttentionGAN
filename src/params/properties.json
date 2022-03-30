@@ -1,0 +1,2 @@
+{"seq_length":512, "min_num_examples": 1, "total_records": 10000, "num_train_set":9000,"num_test_set": 1000 }
+
