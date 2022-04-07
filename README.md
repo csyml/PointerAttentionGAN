@@ -10,10 +10,20 @@
 * Coverage机制来解决重复问题。如果模型在预测时总是注意相同的部分，那么就很有可能会预测出相同的单词，
   因此为了防止这种情况发生，Coverage机制强迫模型多去关注之前没被注意过的角落。
 * TransGAN 在multi-attention 并行执行pointer-network与coverage,Pgen。
+* RNN 如何与GNA无缝连接。
 
 ##3.解决蛋白序列设计中的问题
 * pointer-network 直接提取高性能力学蛋白序列中的功能片段；
 * 解决蛋白序列长度定长问题；
 * 解决蛋白序列重复子序列问题问题；
 * 准确描述蛋白序列中子序列相关性问题。
+
+##4.Reference
+* Language Generation with Recurrent Generative Adversarial Networks
+without Pre-training
+* Bidirectional Conditional Generative Adversarial 
+* Multi-Generator Generative Adversarial Nets
+* Multi-Generator Generative Adversarial Nets
+* Bidirectional Conditional Generative Adversarial Networks
+* Variational Approaches for Auto-Encoding Generative Adversarial Networks
 -->
