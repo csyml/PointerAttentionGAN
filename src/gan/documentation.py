@@ -10,15 +10,14 @@ def setup_logdir(flags, properties):
     one_hot = "one_hot" if flags.one_hot else "embedding"
     input_size = "{}x{}_{}".format(flags.embedding_height, properties['seq_length'], one_hot)
 
-    logdir = os.path.join(flags.weights_dir, flags.dataset.replace("\\", os.sep), flags.model_type, flags.architecture,
-                          input_size, flags.loss_type)
-    tf.io.gfile.mkdir(logdir)
+    logdir = os.path.join(flags.model_type, flags.weights_dir, input_size, flags.loss_type)
+    tf.io.gfile.makedirs(logdir)
     logging.info("Results will be saved in:{}".format(logdir.replace("\\", "\\\\")))
     return logdir
 
 
 def get_properties(flags):
-    path = os.path.join(flags.logdir, flags.properties)
+    path = flags.properties
     with open(path) as json_file:
         properties = json.load(json_file)
     return properties

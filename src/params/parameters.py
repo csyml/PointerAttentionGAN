@@ -5,7 +5,7 @@ CURRENT_DIRECTORY = os.path.dirname(__file__)
 MODEL_TYPE="PointerAttentionGAN"
 #parameters of  training
 flags.DEFINE_string('dataset','dataset','Dataset to use for training. ')
-flags.DEFINE_string('properties', 'properties.json', 'properties file. [properties.json]')
+flags.DEFINE_string('properties', os.path.join(CURRENT_DIRECTORY,'properties.json'), 'properties file. [properties.json]')
 flags.DEFINE_integer('batch_size',16,'Number of protein sequences in input batch.[64]')
 flags.DEFINE_boolean('is_train', True, 'True for training. [default: True]')
 flags.DEFINE_integer('kernel_height', 3, 'The height of the kernel [3]')
